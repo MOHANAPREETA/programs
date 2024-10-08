@@ -1,0 +1,40 @@
+import java.util.*;
+class Cipher {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        int key = scanner.nextInt();
+        scanner.close();
+
+        if (key < 0) {
+            System.out.println("Invalid Input");
+            return;
+        }
+
+        StringBuilder cipherText = new StringBuilder();
+        for (char c : input.toCharArray()) {
+            if (Character.isDigit(c)) {
+                int shiftedDigit = (Character.getNumericValue(c) + key) % 10;
+                cipherText.append(shiftedDigit);
+            } else if (Character.isLetter(c)) {
+               
+                char base = Character.isUpperCase(c) ? 'A' : 'a';
+                char shiftedChar = (char) ((c - base + key) % 26 + base);
+                cipherText.append(shiftedChar);
+            } else {
+
+                cipherText.append(c);
+            }
+        }
+
+        System.out.println(cipherText.toString());
+    }
+}
+
+
+
+
+
+
+
+
