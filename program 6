@@ -1,0 +1,52 @@
+import java.util.*;
+class Linkedlist{
+    Node root;
+
+    class Node{
+        int data;
+        Node left;
+        Node right;
+
+        Node(int val){
+            data = val;
+            left = null;
+            right=null;
+        }
+    }
+    Linkedlist(int num){
+        Node newnode = new Node(num);
+        root = newnode;
+    }
+    public void insert_left(int num){
+        Node newnode = new Node(num);
+            root.left=newnode;
+    }
+    public void insert_right(int val){
+        Node newnode = new Node(val);
+        root.right=newnode;
+    }
+    public void display(Node root){
+        if(root!=null) {
+            System.out.println(root.data + " ");
+            display(root.left);
+            display(root.right);
+        }
+
+        }
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner (System.in);
+        int root=sc.nextInt();
+        Linkedlist list = new Linkedlist(root);
+        while(true)
+        {
+        int num=sc.nextInt();
+        int num2=sc.nextInt();
+        if(num==-1&&num2==-1)
+            break;
+        list.insert_left(num);
+        list.insert_right(num2);
+    }
+        list.display(list.root);
+    }
+}
