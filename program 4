@@ -1,0 +1,43 @@
+import java.util.*;
+class LINKEDLIST
+{
+    public static void main(String[]args)
+    {
+        PriorityQueue<Integer>q=new PriorityQueue<>();
+        q.add(5);
+        q.add(10);
+        q.add(3);
+        q.add(25);
+        System.out.println(q);
+        Vector<Integer>v=new Vector<>();
+        v.add(5);
+        v.add(10);
+        v.add(15);
+        v.add(25);
+
+        LinkedList<Integer> list=new LinkedList<>();
+        list.add(5);
+        list.add(10);
+        list.add(15);
+        list.add(25);
+        System.out.println(list);
+        LinkedList<String>l=new LinkedList<>();
+        l.add("preeta");
+        l.add("vidhya");
+        l.add("naviya");
+        l.add("divya");
+        System.out.println(l);
+        LinkedList <Object>p=new LinkedList<>();
+        p.add("preeta");
+        p.add(22);
+        p.add("naviya");
+        p.add(21);
+        //list.addAll(p);
+        System.out.println(v);
+        System.out.println( p.set(1,"nandha"));
+        System.out.println(p);
+        System.out.println(list.get(3));
+        System.out.println(l.remove(3));
+        //System.out.println(p.poll(3));  cannot use poll in Array List
+    }
+}
