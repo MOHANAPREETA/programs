@@ -1,0 +1,18 @@
+import java.time.*;
+
+public class Datetime {
+    public static void main(String[] args) {
+        LocalDate i=LocalDate.now();
+        LocalDate m=LocalDate.of(2024,12,12);
+        System.out.println(i);
+        System.out.println(m);
+        Instant n=Instant.now();
+        System.out.println(n);
+        LocalTime t=LocalTime.now();
+        LocalDateTime s=LocalDateTime.of(2024,12,12,10,10,10);
+        System.out.println(t);
+        System.out.println(s);
+
+
+    }
+}
