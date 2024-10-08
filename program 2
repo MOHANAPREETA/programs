@@ -1,0 +1,33 @@
+import java.util.*;
+class main{
+    public static void main(String[] args)
+    {
+        Scanner b=new Scanner (System.in);
+        int b1=b.nextInt();
+        int l1=b.nextInt();
+        int b2=b.nextInt();
+        int l2=b.nextInt();
+        int r_s=b.nextInt();
+        int w_s=b.nextInt();
+        int  k=b.nextInt();
+        int f1_tot=b1*l1;
+        int tot_f1=f1_tot/r_s;
+        //System.out.println(tot_f1);
+        int c_p=0,l_p=0;
+        if(k<=tot_f1)
+        {
+            c_p=(k*r_s)/l1;
+            l_p=(k*r_s)%l1;
+
+        System.out.println("READ "+c_p+" "+l_p);}
+        else  {
+            int e=k-tot_f1;
+            c_p=(e*w_s)/l2;
+            l_p=(e*w_s)%l2;
+            System.out.println("WRITE "+c_p+" "+l_p);
+
+        }
+
+
+    }
+}
